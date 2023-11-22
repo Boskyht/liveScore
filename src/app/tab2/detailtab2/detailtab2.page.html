@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Result Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let item of result">
+    <img [src]="item.strThumb" alt="image not available" style="width: 100%;">
+    <br>
+    <br>
+    <ion-label class="ion-text-center">
+      <div>
+        <h2>{{item.strEvent}}</h2>
+      </div>
+      <div>
+        {{item.intHomeScore}} - {{item.intAwayScore}}
+      </div>
+    </ion-label>
+
+    <ion-card>
+      <ion-card-header>
+        <div>
+          League : {{item.strLeague}} <br>
+          Date : {{item.dateEvent}} <br>
+          Time : {{item.strTime}} <br>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{item.strDescriptionEN}}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

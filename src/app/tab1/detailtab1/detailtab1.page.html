@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Events To Go
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of result">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-label class="ion-text-center ion-margin-bottom ion-margin-top">
+            <ion-img [src]="item.strThumb" alt="image not available" style="width: 200px;"></ion-img>
+            {{item.strEvent}} <br>
+            {{item.strLeague}} <br>
+            {{item.dateEvent}} <br>
+            {{item.strTime}} <br>
+        </ion-label>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

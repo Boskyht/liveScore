@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Leagues
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let item of result" [routerLink]="[item.idLeague]">
+      <ion-label class="ion-margin-start">{{item.strLeague}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
